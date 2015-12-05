@@ -1,5 +1,6 @@
 .judul {
-	margin-bottom: 5%;
+	margin-top: 5%;
+	margin-bottom: 20px;
 }
 
 .search-form {
@@ -16,4 +17,12 @@
 }
 .keterangan {
 	padding-left: 10px;
+}
+.content-graf {
+	height: 400px;
+	width: auto;
+}
+.content {
+	padding-right: 20%;
+	padding-left: 20%;
 }

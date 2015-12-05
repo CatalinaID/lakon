@@ -71,26 +71,22 @@
             </div>
         </div>
 
-        <div id="tabs" class="tabs no-js">
-            <div id="c-tabs-nav">
-                <ul class="nav nav-tabs">
-                    <li role="presentation" class="active nav-tabs is-active"><a href="#"> 1 orang </a></li>
-                    <li role="presentation"><a href="#">2 orang</a></li>
-                </ul>
+        <div id="tabs" class="c-tabs no-js">
+            <div class="c-tabs-nav">
+                <a href="#" class="c-tabs-nav__link is-active"></a>
+                <a href="#" class="c-tabs-nav__link"></a>
             </div>
             <div class="c-tab is-active">
                 <div class="c-tab__content">
-                    <div class="panel panel-default search-form">
-                        <div class="panel-body">
-                            <div class="search-panel">
-                                <div class="input-group input-group-lg">
-                                    <input type="text" class="form-control" placeholder="Masukkan nama">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button">
-                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                        </button>
-                                    </span>
-                                </div>
+                    <div class="search-form">
+                        <div class="search-panel">
+                            <div class="input-group input-group-lg">
+                                <input type="text" class="form-control" placeholder="Masukkan nama">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                    </button>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -98,28 +94,17 @@
             </div>
             <div class="c-tab">
                 <div class="c-tab__content">
-                    <div class="panel panel-default search-form">
-                        <div class="panel-body">
-                            <div class="search-panel">
-                                <div class="input-group input-group-lg">
-                                    <input type="text" class="form-control" placeholder="Masukkan nama">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button">
-                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                        </button>
-                                    </span>
-                                </div>
-                                <div class="input-group input-group-lg">
-                                    <input type="text" class="form-control" placeholder="Masukkan nama">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button">
-                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                        </button>
-                                    </span>
-                                </div>
-                            </div>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control input-lg" placeholder="Masukkan nama" id="nama-1">
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control input-lg" placeholder="Masukkan nama" id="nama-2">
+                        </div>
+                        <button class="btn btn-default btn-block btn-lg" type="submit">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -133,6 +118,15 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script src="js/lakon.js"></script>
+
+    <script>
+      var myTabs = tabs({
+        el: '#tabs',
+        tabNavigationLinks: '.c-tabs-nav__link',
+        tabContentContainers: '.c-tab'
+      });
+      myTabs.init();
+    </script>
 
 </body>
 

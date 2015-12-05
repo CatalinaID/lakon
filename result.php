@@ -14,6 +14,10 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+   
+    <!--alchemy -->
+    <link rel="stylesheet" href="http://cdn.graphalchemist.com/alchemy.0.4.1.min.css">
+
 
     <!-- Custom CSS -->
     <style>
@@ -64,19 +68,20 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="content">
         <div class="row">
-            <div class="col-lg-12 text-center judul">
-                <h1>LAKON</h1>
+            <div class="col-md-6 judul">
+                <h3>Hasil pencarian lalala</h3>
             </div>
         </div>
 
-        <div class="panel panel-default">
-            <div class="panel-heading">Hubugan antara X dan Y</div>  
-            <div class="panel-body" id="graf">
-                
+        <div>
+            <div class="content-graf" id="graf">
+                <div class="alchemy" id="alchemy">
+                </div>
             </div> <!--graf nya disini -->
             <h4 class="keterangan"> Keterangan </h4>
+            <div id="temp"></div>
             <ul class="list-group">
                 <li class="list-group-item">Relasi 1 </li>
                 <li class="list-group-item">Relasi 2 </li>
@@ -95,6 +100,39 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script src="js/lakon.js"></script>
+
+    <script type="text/javascript" src="http://cdn.graphalchemist.com/alchemy.0.4.1.min.js"></script>
+
+    <script type="text/javascript">
+        var some_data = {
+            "nodes": [
+              {
+                "id": 1
+              },
+              {
+                "id": 2
+              },
+              {
+                "id": 3
+              }
+            ],
+            "edges": [
+              {
+                "source": 1,
+                "target": 2
+              },
+              {
+                "source": 1,
+                "target": 3,
+              }
+            ]
+        };
+        var config = {
+            dataSource : some_data,
+        };
+        alchemy = new Alchemy(config);
+    </script>
+
 </body>
 
 </html>
