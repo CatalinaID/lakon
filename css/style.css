@@ -1,0 +1,16 @@
+.judul {
+	margin-bottom: 5%;
+}
+
+.search-form {
+	min-height: 300px;
+}
+.input-group {
+	margin-bottom: 20px;
+}
+.c-tabs {
+	display:none;
+}
+.c-tabs.is-active {
+	display:block;
+}
