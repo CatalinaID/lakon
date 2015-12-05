@@ -14,6 +14,7 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -73,21 +74,24 @@
 
         <div id="tabs" class="c-tabs no-js">
             <div class="c-tabs-nav">
-                <a href="#" class="c-tabs-nav__link is-active"></a>
-                <a href="#" class="c-tabs-nav__link"></a>
+                <a href="#" class="c-tabs-nav__link is-active">
+                    <i class="fa fa-user"></i>
+                </a>
+                <a href="#" class="c-tabs-nav__link">
+                    <i class="fa fa-user"></i>
+                    <i class="fa fa-user"></i>
+                </a>
             </div>
             <div class="c-tab is-active">
                 <div class="c-tab__content">
                     <div class="search-form">
-                        <div class="search-panel">
-                            <div class="input-group input-group-lg">
-                                <input type="text" class="form-control" placeholder="Masukkan nama">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">
-                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                    </button>
-                                </span>
-                            </div>
+                        <div class="input-group input-group-lg">
+                            <input type="text" class="form-control" placeholder="Masukkan nama">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                            </span>
                         </div>
                     </div>
                 </div>
