@@ -39,7 +39,10 @@
 <body>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" id="ContainLanding">
+        <div class="row">
+            <img src="assets/mask.png" class="img-responsive" id="LakonIcon">
+        </div>
         <div class="row">
             <div class="col-lg-12 text-center judul" style="font-family: 'Lobster', cursive;">
                 <p id="JudulLanding">LAKON</p>
@@ -62,7 +65,7 @@
                         <div class="input-group input-group-lg">
                             <input type="text" class="form-control" placeholder="Masukkan nama">
                             <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
+                                <button class="btn btn-danger" type="button">
                                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                                 </button>
                             </span>
@@ -72,17 +75,19 @@
             </div>
             <div class="c-tab">
                 <div class="c-tab__content">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control input-lg" placeholder="Masukkan nama" id="nama-1">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control input-lg" placeholder="Masukkan nama" id="nama-2">
-                        </div>
-                        <button class="btn btn-danger btn-lg" type="submit" id="SearchButton">
-                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                        </button>
-                    </form>
+                    <div class="search-form">
+                        <form>
+                            <div class="col-md-5 form-group">
+                                <input type="text" class="form-control input-lg" placeholder="Masukkan nama" id="nama-1">
+                            </div>
+                            <div class="col-md-5 form-group">
+                                <input type="text" class="form-control input-lg" placeholder="Masukkan nama" id="nama-2">
+                            </div>
+                            <button class="btn btn-danger btn-lg" type="submit" id="SearchButton">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

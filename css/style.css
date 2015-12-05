@@ -1,9 +1,39 @@
-#SearchButton {
-  width: 140px;
+.list-group-item {
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
+.lobster {
+  font-family: 'Lobster', cursive;
+}
+
+#JudulResult {
+  font-family: 'Lobster', cursive;
+  font-size: 45px;
+}
+
+body {
+  background-color: #E5DDCB !important;
+}
+
+#LakonIconSmall {
+  width: 10%;
+  height: 10%;
+  margin: 0 auto;
+}
+
+#LakonIcon {
+  width: 20%;
+  height: 20%;
+  margin: 0 auto;
+}
+
+#SearchButton {
+  width: 170px;
+} 
+
 #JudulLanding {
-  font-size: 100px;
+  font-size: 190px;
+  margin-top: -100px;
 }
 
 .judul {
@@ -92,6 +122,7 @@
 /** RESULT PAGE **/
 .keterangan {
 	padding-left: 10px;
+  font-family: 'Lobster', cursive;
 }
 .content-graf {
 	height: 400px;
