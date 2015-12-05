@@ -23,8 +23,18 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="col-lg-12">
-				<img src="bs.png" class="img-responsive" style="margin: 0 auto;">
+			<div class="row">
+				<div class="col-lg-12">
+					<img src="bs.png" class="img-responsive" style="margin: 0 auto;">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 align="center">Lakon</h1>
+				</div>
+			</div>
+			<div class="row">
+				
 			</div>
 		</div>
 

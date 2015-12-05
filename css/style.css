@@ -1,6 +1,15 @@
+#SearchButton {
+  width: 140px;
+}
+
+#JudulLanding {
+  font-size: 100px;
+}
+
 .judul {
 	margin-top: 5%;
 	margin-bottom: 20px;
+  font-family: 'Lobster', cursive;
 }
 
 .search-form {
