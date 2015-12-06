@@ -160,7 +160,106 @@ function startAlchemy() {
         	}
         },
         captionsToogle : true
-
     };
     alchemy = new Alchemy(config);
 }
+
+// function getData(query) {
+// 	var url = "http://194.135.81.36:8080/lakon-0.1/relasi/list";
+//     $.ajax({
+//         type: 'GET',
+//         url: "http://194.135.81.36:8080/lakon-0.1/relasi/list",
+//         dataType: 'json',
+//         success: function(data) {
+//             for (var i = 0; i < data.length; i++) {
+//                 console.log(data[i]);
+//             }
+//             return data;
+//         }
+//     });
+// }
+
+//autocomplete
+$('.form-control').click(function() {
+	if (this.id == "namaSatu") {
+       $("#namaSatu").autocomplete({
+        	source: function(request, response) {
+        		$.ajax({
+                    url : "http://localhost:8080/lakon/Alias/searchByAlias?alias=" + request.term,
+        			dataType: "json",
+        			jsonp : false,
+                    success: function(data) {
+                    	response($.map(data, function(item) {
+				            return {
+				               label: item.nama,
+				               id: item.id,
+				               type : item.type
+				           	}
+                    	}));
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                    	alert(jqXHR);
+                    }
+                });
+            },
+            minLength : 1,
+            select : function (event, ui) {
+                console.log("selected : " + ui.item.label + " " + ui.item.id);
+            }
+        });
+    } else if (this.id == "namaPertama") {
+        console.log("klik 2-1");
+        $("#namaPertama").autocomplete({
+            source: function(request, response) {
+        		$.ajax({
+                    url : "http://localhost:8080/lakon/Alias/searchByAlias?alias=" + request.term,
+        			dataType: "json",
+        			jsonp : false,
+                    success: function(data) {
+                    	response($.map(data, function(item) {
+				            return {
+				               label: item.nama,
+				               id: item.id,
+				               type : item.type
+				           	}
+                    	}));
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                    	alert(jqXHR);
+                    }
+                });
+            },
+            minLength : 1,
+            select : function (event, ui) {
+                console.log("selected : " + ui.item.label + " " + ui.item.id);
+            }
+        });
+    } else if (this.id == "namaKedua") {
+        console.log("klik 2-2");
+        $("#namaKedua").autocomplete({
+            source: function(request, response) {
+        		$.ajax({
+                    url : "http://localhost:8080/lakon/Alias/searchByAlias?alias=" + request.term,
+        			dataType: "json",
+        			jsonp : false,
+                    success: function(data) {
+                    	response($.map(data, function(item) {
+				            return {
+				               label: item.nama,
+				               id: item.id,
+				               type : item.type
+				           	}
+                    	}));
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                    	alert(jqXHR);
+                    }
+                });
+            },
+            minLength : 1,
+            select : function (event, ui) {
+                console.log("selected : " + ui.item.label + " " + ui.item.id);
+            }
+        });
+    }
+});

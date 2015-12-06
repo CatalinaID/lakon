@@ -15,10 +15,12 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
+    <link rel="icon" type="image/png" href="assets/mask.png">
     <!-- Custom CSS -->
     <style>
     body {
@@ -44,7 +46,7 @@
     <!-- Page Content -->
     <div class="container" id="ContainLanding">
         <div class="row">
-            <img src="assets/mask.png" class="img-responsive" id="LakonIcon">
+            <a href ="index.php"><img src="assets/mask.png" class="img-responsive" id="LakonIcon"/></a>
         </div>
         <div class="row">
             <div class="col-lg-12 text-center judul" style="font-family: 'Lobster', cursive;">
@@ -64,33 +66,31 @@
             </div>
             <div class="c-tab is-active">
                 <div class="c-tab__content">
-                    <div class="search-form">
+                    <form class="search-form" id="formOne" onsubmit="return submit1();">
                         <div class="input-group input-group-lg">
-                            <input type="text" class="form-control" placeholder="Masukkan nama satu orang yang ingin dicari relasinya">
+                            <input type="text" class="form-control" placeholder="Masukkan nama satu orang yang ingin dicari relasinya" id="namaSatu">
                             <span class="input-group-btn">
-                                <button class="btn btn-danger" type="button">
+                                <button class="btn btn-danger" type="submit" id="buttonOne">
                                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                                 </button>
                             </span>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
             <div class="c-tab">
                 <div class="c-tab__content">
-                    <div class="search-form">
-                        <form>
-                            <div class="col-md-5 form-group">
-                                <input type="text" class="form-control input-lg" placeholder="Masukkan nama orang pertama" id="nama-1">
-                            </div>
-                            <div class="col-md-5 form-group">
-                                <input type="text" class="form-control input-lg" placeholder="Masukkan nama orang kedua" id="nama-2">
-                            </div>
-                            <button class="btn btn-danger btn-lg" type="submit" id="SearchButton">
-                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                            </button>
-                        </form>
-                    </div>
+                    <form class="search-form" id="formTwo" onsubmit="return submit2();">
+                        <div class="col-md-5 form-group">
+                            <input type="text" class="form-control input-lg" placeholder="Masukkan nama orang pertama" id="namaPertama">
+                        </div>
+                        <div class="col-md-5 form-group">
+                            <input type="text" class="form-control input-lg" placeholder="Masukkan nama orang kedua" id="namaKedua">
+                        </div>
+                        <button class="btn btn-danger btn-lg" type="submit" id="buttonTwo">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -99,6 +99,7 @@
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
