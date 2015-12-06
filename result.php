@@ -46,9 +46,9 @@
         <div class="row">
             <img src="assets/mask.png" class="img-responsive" id="LakonIconSmall">                        
         </div>
-
+        <hr>
         <div class="row">
-            <div class="col-md-6 judul">
+            <div class="col-md-6 judul" id="JudulResult">
                 <h2 class="lobster">Hasil pencarian lilili</h2>
             </div>
         </div>
@@ -61,9 +61,9 @@
             <h2 class="keterangan"> Keterangan </h2>
             <div id="temp"></div>
             <ul class="list-group">
-                <li class="list-group-item">Relasi 1 </li>
-                <li class="list-group-item">Relasi 2 </li>
-                <li class="list-group-item">Relasi 3 </li>
+                <li class="list-group-item"><b>Relasi 1</b> Teman SMA </li>
+                <li class="list-group-item"><b>Relasi 2</b> Teman Kuliah </li>
+                <li class="list-group-item"><b>Relasi 3</b> Mantan Pacar </li>
             </ul>
 
         </div>
