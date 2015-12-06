@@ -51,8 +51,8 @@
         </div>
         <hr>
         <div class="row">
-            <div class="col-md-6 judul" id="JudulResult">
-                <h2 class="lobster">Hasil pencarian lilili</h2>
+            <div class="col-md-12 judul" id="JudulResult">
+                <h2 class="lobster">Hasil pencarian relasi Susilo Bambang Yudhoyono</h2>
             </div>
         </div>
 
@@ -65,9 +65,10 @@
             <h2 class="keterangan"> Keterangan </h2>
             <div id="temp"></div>
             <ul class="list-group">
-                <li class="list-group-item"><b>Relasi 1</b> Teman SMA </li>
-                <li class="list-group-item"><b>Relasi 2</b> Teman Kuliah </li>
-                <li class="list-group-item"><b>Relasi 3</b> Mantan Pacar </li>
+                <li class="list-group-item"><b>Relasi 1</b> Besan Hatta Rajasa </li>
+                <li class="list-group-item"><b>Relasi 2</b> Ayah Edhie Baskoro </li>
+                <li class="list-group-item"><b>Relasi 3</b> Ketua dewan pembina Partai Demokrat </li>
+                <li class="list-group-item"><b>Relasi 3</b> Makan malam bersama Puan Maharani </li>
             </ul>
 
         </div>
@@ -110,7 +111,7 @@
 </body>
 
 <footer>
-    <p align="center" style="font-size: 10px;">Copyright 2015. Catalina.<br>Supported by:</p> 
+    <p align="center" style="font-size: 10px;">Hak Cipta 2015 oleh Catalina. <a href="about.php">Bantuan</a>.<br>Didukung oleh:</p> 
     <div class="row">
         <img src="assets/logos.png" class="img-responsive" id="logos">
     </div>
