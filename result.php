@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Lakon</title>
+    <title>LAKON</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -62,7 +62,7 @@
             <div class="content-graf">
                 <div class="alchemy" id="alchemy">
                 </div>
-                <p id="temp">muahahaha </p>
+                <p id="temp">Hover pada graf untuk melihat label.</p>
             </div> <!--graf nya disini -->
             <h2 class="keterangan"> Keterangan </h2>
             <div id="temp"></div>

@@ -55,19 +55,40 @@
 			<div class="col-md-12">
 				<h2 class="lobster">Cara Menggunakan Aplikasi Ini</h2>
 				<p class="roboto">Aplikasi ini dapat menampilkan relasi yang dimiliki seseorang dengan entitas-entitas lain maupun relasi spesifik antara 2 entitas. 
-				Saat pengguna memasukkan satu nama entitas pada form tab pertama, aplikasi ini akan menampilkan graf yang menggambarkan semua relasi entitas tersebut (sampai batas tertentu) dengan entitas-entitas lain.
+				Saat pengguna memasukkan satu nama entitas pada form tab pertama, aplikasi ini akan menampilkan graf yang menggambarkan semua relasi entitas tersebut dengan entitas-entitas lain (sampai batas tertentu).
 				Saat pengguna memasukkan dua nama entitas pada form tab kedua, aplikasi akan menampilkan semua relasi antara kedua entitas tersebut.</p>
-				<p class="robot">Berikut adalah penjelasan mengenai graf yang ditampilkan pada hasil pencarian:</p>
-				<ul>
-					<li>Titik Merah : menggambarkan entitas utama yang namanya dimasukkan pada form pencarian</li>
-					<li>Titik Kuning</li>
-					<li>Titik Biru</li>
-					<li>Garis Hijau</li>
-					<li>Garis Merah</li>
-					<li>Garis Biru</li>
-					
-					
-				</ul>	
+				<p class="roboto">Berikut adalah penjelasan mengenai graf yang ditampilkan pada hasil pencarian:</p>
+				<img src="assets/graf.png">
+				<p></p>
+				<table class="table table-hover">
+					<tbody>
+						<tr>
+							<td class="col-md-3"><b>Titik Merah</b></td>
+							<td>menggambarkan entitas utama yang namanya dimasukkan pada form pencarian</td>
+						</tr>
+						<tr>
+							<td class="col-md-3"><b>Titik Kuning</b></td>
+							<td>menggambarkan entitas orang</td>
+						</tr>
+						<tr>
+							<td class="col-md-3"><b>Titik Biru</b></td>
+							<td>menggambarkan entitas organisasi</td>
+						</tr>
+						<tr>
+							<td class="col-md-3"><b>Garis Merah</b></td>
+							<td>menggambarkan jabatan entitas</td>
+						</tr>
+						<tr>
+							<td class="col-md-3"><b>Garis Hijau</b></td>
+							<td>menggambarkan event yang diikuti kedua entitas</td>
+						</tr>
+						<tr>
+							<td class="col-md-3"><b>Garis Biru</b></td>
+							<td>menggambarkan hubungan sosial antara kedua entitas</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="roboto">Saat mouse di-<i>hover</i> pada titik, akan muncul label nama entitas. Saat mouse di-<i>hover</i> pada garis, akan muncul label nama relasi.</p>
 			</div>
 		</div>
 	</div>
