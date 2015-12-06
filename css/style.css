@@ -1,3 +1,15 @@
+#logos {
+  width: 30%;
+  height: 30%;
+  margin: 0 auto;
+  margin-top: -1%;
+}
+
+footer {
+  margin-top: 3%;
+  position: center;
+}
+
 #tabs {
   width: 80%;
   margin: 0 auto;
@@ -22,6 +34,7 @@
 
 body {
   background-color: #E5DDCB !important;
+  margin-top: -6%;
 }
 
 #LakonIconSmall {
