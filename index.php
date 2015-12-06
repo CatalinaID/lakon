@@ -66,7 +66,7 @@
                 <div class="c-tab__content">
                     <div class="search-form">
                         <div class="input-group input-group-lg">
-                            <input type="text" class="form-control" placeholder="Masukkan nama">
+                            <input type="text" class="form-control" placeholder="Masukkan nama satu orang yang ingin dicari relasinya">
                             <span class="input-group-btn">
                                 <button class="btn btn-danger" type="button">
                                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -81,10 +81,10 @@
                     <div class="search-form">
                         <form>
                             <div class="col-md-5 form-group">
-                                <input type="text" class="form-control input-lg" placeholder="Masukkan nama" id="nama-1">
+                                <input type="text" class="form-control input-lg" placeholder="Masukkan nama orang pertama" id="nama-1">
                             </div>
                             <div class="col-md-5 form-group">
-                                <input type="text" class="form-control input-lg" placeholder="Masukkan nama" id="nama-2">
+                                <input type="text" class="form-control input-lg" placeholder="Masukkan nama orang kedua" id="nama-2">
                             </div>
                             <button class="btn btn-danger btn-lg" type="submit" id="SearchButton">
                                 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
