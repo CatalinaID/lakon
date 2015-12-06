@@ -16,6 +16,9 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
 
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
     <!-- Custom CSS -->
     <style>
     body {
@@ -35,40 +38,14 @@
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Lakon</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">Beranda</a>
-                    </li>
-                    <li>
-                        <a href="#">Bantuan</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" id="ContainLanding">
         <div class="row">
-            <div class="col-lg-12 text-center judul">
-                <h1>LAKON</h1>
+            <img src="assets/mask.png" class="img-responsive" id="LakonIcon">
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center judul" style="font-family: 'Lobster', cursive;">
+                <p id="JudulLanding">LAKON</p>
             </div>
         </div>
 
@@ -88,7 +65,7 @@
                         <div class="input-group input-group-lg">
                             <input type="text" class="form-control" placeholder="Masukkan nama">
                             <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
+                                <button class="btn btn-danger" type="button">
                                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                                 </button>
                             </span>
@@ -98,17 +75,19 @@
             </div>
             <div class="c-tab">
                 <div class="c-tab__content">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control input-lg" placeholder="Masukkan nama" id="nama-1">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control input-lg" placeholder="Masukkan nama" id="nama-2">
-                        </div>
-                        <button class="btn btn-default btn-block btn-lg" type="submit">
-                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                        </button>
-                    </form>
+                    <div class="search-form">
+                        <form>
+                            <div class="col-md-5 form-group">
+                                <input type="text" class="form-control input-lg" placeholder="Masukkan nama" id="nama-1">
+                            </div>
+                            <div class="col-md-5 form-group">
+                                <input type="text" class="form-control input-lg" placeholder="Masukkan nama" id="nama-2">
+                            </div>
+                            <button class="btn btn-danger btn-lg" type="submit" id="SearchButton">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

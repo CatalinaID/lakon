@@ -18,6 +18,9 @@
     <!--alchemy -->
     <link rel="stylesheet" href="http://cdn.graphalchemist.com/alchemy.0.4.1.min.css">
 
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,300italic,300,700,700italic' rel='stylesheet' type='text/css'>
 
     <!-- Custom CSS -->
     <style>
@@ -38,40 +41,15 @@
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.php">Lakon</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">Beranda</a>
-                    </li>
-                    <li>
-                        <a href="#">Bantuan</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
     <!-- Page Content -->
     <div class="content">
         <div class="row">
-            <div class="col-md-6 judul">
-                <h3>Hasil pencarian lalala</h3>
+            <img src="assets/mask.png" class="img-responsive" id="LakonIconSmall">                        
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 judul" id="JudulResult">
+                <h2 class="lobster">Hasil pencarian lilili</h2>
             </div>
         </div>
 
@@ -81,12 +59,12 @@
                 </div>
                 <p id="temp"> </p>
             </div> <!--graf nya disini -->
-            <h4 class="keterangan"> Keterangan </h4>
+            <h2 class="keterangan"> Keterangan </h2>
             <div id="temp"></div>
             <ul class="list-group">
-                <li class="list-group-item">Relasi 1 </li>
-                <li class="list-group-item">Relasi 2 </li>
-                <li class="list-group-item">Relasi 3 </li>
+                <li class="list-group-item"><b>Relasi 1</b> Teman SMA </li>
+                <li class="list-group-item"><b>Relasi 2</b> Teman Kuliah </li>
+                <li class="list-group-item"><b>Relasi 3</b> Mantan Pacar </li>
             </ul>
 
         </div>
