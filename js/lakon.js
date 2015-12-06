@@ -1,11 +1,5 @@
-$(document).ready(function() {
-    $.ajax({
-        url: "http://194.135.81.36:8080/lakon-0.1/relasi/list"
-    }).then(function(data) {
-       $('#temp').append(data.content);
-    });
-});
 
+//responsive tabs
 (function() {
 
 	'use strict';
@@ -56,3 +50,117 @@ $(document).ready(function() {
 
 	window.tabs = tabs;
 })();
+
+//alchemy configuration
+function startAlchemy() {
+	var some_data = {
+        "nodes" : [
+			{
+				"id" : 1,
+				"name" : "Susilo Bambang Yudhoyono",
+				root: true,
+				"type" : "main"
+			},
+			{
+				"id" : 2,
+				"name" : "Demokrat",
+				"type" : "organisasi"
+			}, 
+			{
+				"id" : 3,
+				"name" : "Khoirunisa Afifah",
+				"type" : "tokoh"
+			},
+			{
+				"id" : 4,
+				"name" : "Hatta Rajasa",
+				"type" : "tokoh"
+			}, 
+			{
+				"id" : 5,
+				"name" : "Edhie Baskoro",
+				"type" : "tokoh"
+			}
+		],
+		"edges" : [
+			{
+				"source" : 1,
+				"target" : 3,
+				"keterangan" : "makan malam bersama",
+				"type" : "event"
+			},
+			{
+				"source" : 1,
+				"target" : 2,
+				"keterangan" : "ketua dewan pembina partai",
+				"type" : "jabatan"
+			},
+			{
+				"source" : 1,
+				"target" : 4,
+				"keterangan" : "besan",
+				"type" : "hubungan"
+			}, 
+			{
+				"source" : 1,
+				"target" : 5,
+				"keterangan" : "anak",
+				"type" : "hubungan"
+			},
+			{
+				"source" : 2,
+				"target" : 5,
+				"keterangan" : "anggota",
+				"type" : "jabatan"
+			}
+		]
+    };
+    var config = {
+    	dataSource : some_data,
+        fixRootNodes : true,
+        nodeTypes : {
+        	"type": ["tokoh","organisasi","main"]
+        },
+        edgeTypes : {
+        	"type" : ["event","jabatan","hubungan"]
+        },
+        nodeCaption : 'name',
+        edgeCaption : 'keterangan',
+        forcedLocked : false,
+        nodeStyle : {
+        	"tokoh" : {
+        		"color" : "#ffff00",
+        		"borderColor" : "#ffbf00",
+        		"radius" : 15,
+        		"borderWidth" : 3
+        	},
+        	"organisasi" : {
+        		"radius" : 10,
+
+        	},
+        	"main" : {
+        		"radius" : 20,
+        		"color" : "#ff0000",
+        		"borderColor" : "#cc0000"
+        	}
+        },
+        edgeStyle : {
+        	"all" : {
+        		"width" : 7,
+        		"opacity" : 0.5
+        	},
+        	"event" : {
+        		"color" : "rgb(0, 204, 0)"
+        	},
+        	"jabatan" : {
+        		"color" : "rgb(204, 0, 0)"
+        	},
+        	"hubungan" : {
+        		"color" : "rgb(0, 153, 204)"
+        	}
+        },
+        captionsToogle : true
+
+    };
+    alchemy = new Alchemy(config);
+}
