@@ -164,22 +164,8 @@ function startAlchemy() {
     alchemy = new Alchemy(config);
 }
 
-// function getData(query) {
-// 	var url = "http://194.135.81.36:8080/lakon-0.1/relasi/list";
-//     $.ajax({
-//         type: 'GET',
-//         url: "http://194.135.81.36:8080/lakon-0.1/relasi/list",
-//         dataType: 'json',
-//         success: function(data) {
-//             for (var i = 0; i < data.length; i++) {
-//                 console.log(data[i]);
-//             }
-//             return data;
-//         }
-//     });
-// }
-
 //autocomplete
+var id, id1, id2, type, type1, type2;
 $('.form-control').click(function() {
 	if (this.id == "namaSatu") {
        $("#namaSatu").autocomplete({
@@ -204,6 +190,9 @@ $('.form-control').click(function() {
             },
             minLength : 1,
             select : function (event, ui) {
+            	id = ui.item.id;
+            	type = ui.item.type;
+            	$("namaSatu").val(ui.item.label);
                 console.log("selected : " + ui.item.label + " " + ui.item.id);
             }
         });
@@ -231,6 +220,9 @@ $('.form-control').click(function() {
             },
             minLength : 1,
             select : function (event, ui) {
+            	id1 = ui.item.id;
+            	type1 = ui.item.type;
+            	$("namaPertama").val(ui.item.label);
                 console.log("selected : " + ui.item.label + " " + ui.item.id);
             }
         });
@@ -258,6 +250,9 @@ $('.form-control').click(function() {
             },
             minLength : 1,
             select : function (event, ui) {
+            	id2 = ui.item.id;
+            	type2 = ui.item.type;
+            	$("namaSatu").val(ui.item.label);
                 console.log("selected : " + ui.item.label + " " + ui.item.id);
             }
         });
