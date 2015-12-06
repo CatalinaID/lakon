@@ -47,8 +47,9 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h2 class="lobster">Tentang Aplikasi Ini</h2>
-				<p class="roboto">Sistem yang menerima masukan berita dari sumber yang cukup dipercaya, kemudian mengeluarkan keterhubungan antar entitas, baik tokoh maupun organisasi, dalam bidang pemerintahan, politik, dan bisnis. Keterhubungan dapat berupa grafik pada UI dan response pada API.</p>	
+				<p class="roboto">Sistem yang menerima masukan berita dari sumber yang cukup dipercaya, kemudian mengeluarkan keterhubungan antar entitas, baik tokoh maupun organisasi, dalam bidang pemerintahan, politik, dan bisnis. Keterhubungan dapat berupa grafik pada <i>User Interface</i> dan <i>response</i> pada API.</p>	
 				<p class="roboto">Sistem ini akan membantu masyarakat dalam memahami hubungan antara politisi, pebisnis, dan orang-orang berkuasa di Indonesia. Sistem ini juga dapat membantu kerja jurnalis dan bahkan KPK untuk melakukan investigasi kasus korupsi.</p>
+				<p class="roboto">Data yang digunakan aplikasi ini diambil dari teks berita. Untuk sementara, input data dilakukan manual oleh admin. Rencana pengembangan selanjutnya adalah menambahkan <i>crawler</i> agar input data dapat dilakukan secara otomatis.</p>
 			</div>
 		</div>
 		<div class="row">
