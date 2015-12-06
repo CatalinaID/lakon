@@ -28,6 +28,9 @@
     }
     </style>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/mask.png">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -64,7 +67,7 @@
                 <div class="c-tab__content">
                     <form class="search-form" id="formOne" onsubmit="return submit1();">
                         <div class="input-group input-group-lg">
-                            <input type="text" class="form-control" placeholder="Masukkan nama" id="namaSatu">
+                            <input type="text" class="form-control" placeholder="Masukkan nama satu orang yang ingin dicari relasinya">
                             <span class="input-group-btn">
                                 <button class="btn btn-danger" type="submit" id="buttonOne">
                                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -78,10 +81,10 @@
                 <div class="c-tab__content">
                     <form class="search-form" id="formTwo" onsubmit="return submit2();">
                         <div class="col-md-5 form-group">
-                            <input type="text" class="form-control input-lg" placeholder="Masukkan nama" id="namaPertama">
+                            <input type="text" class="form-control input-lg" placeholder="Masukkan nama orang pertama" id="namaPertama">
                         </div>
                         <div class="col-md-5 form-group">
-                            <input type="text" class="form-control input-lg" placeholder="Masukkan nama" id="namaKedua">
+                            <input type="text" class="form-control input-lg" placeholder="Masukkan nama orang kedua" id="namaKedua">
                         </div>
                         <button class="btn btn-danger btn-lg" type="submit" id="buttonTwo">
                             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -122,5 +125,12 @@
         }
     </script>
 </body>
+
+<footer>
+    <p align="center" style="font-size: 10px;">Copyright 2015. Catalina.<br>Supported by:</p> 
+    <div class="row">
+        <img src="assets/logos.png" class="img-responsive" id="logos">
+    </div>
+</footer>
 
 </html>

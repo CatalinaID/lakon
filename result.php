@@ -32,6 +32,9 @@
     }
     </style>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/mask.png">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -94,5 +97,12 @@
 
 
 </body>
+
+<footer>
+    <p align="center" style="font-size: 10px;">Copyright 2015. Catalina.<br>Supported by:</p> 
+    <div class="row">
+        <img src="assets/logos.png" class="img-responsive" id="logos">
+    </div>
+</footer>
 
 </html>
