@@ -44,7 +44,7 @@
     <!-- Page Content -->
     <div class="content">
         <div class="row">
-            <img src="assets/mask.png" class="img-responsive" id="LakonIconSmall">                        
+            <a href="index.php"><img src="assets/mask.png" class="img-responsive" id="LakonIconSmall"></a>                        
         </div>
         <hr>
         <div class="row">
