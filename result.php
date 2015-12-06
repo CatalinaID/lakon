@@ -22,6 +22,8 @@
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,300italic,300,700,700italic' rel='stylesheet' type='text/css'>
 
+    <link rel="icon" type="image/png" href="assets/mask.png">
+
     <!-- Custom CSS -->
     <style>
     body {
@@ -44,7 +46,7 @@
     <!-- Page Content -->
     <div class="content">
         <div class="row">
-            <img src="assets/mask.png" class="img-responsive" id="LakonIconSmall">                        
+            <a href ="index.php" title="Kembali ke beranda"><img src="assets/mask.png" class="img-responsive" id="LakonIconSmall"/></a>                        
         </div>
         <hr>
         <div class="row">
@@ -57,7 +59,7 @@
             <div class="content-graf">
                 <div class="alchemy" id="alchemy">
                 </div>
-                <p id="temp"> </p>
+                <p id="temp">muahahaha </p>
             </div> <!--graf nya disini -->
             <h2 class="keterangan"> Keterangan </h2>
             <div id="temp"></div>
@@ -87,20 +89,7 @@
     </script>
 
     <script type="text/javascript">
-        // var url = "http://194.135.81.36:8080/lakon-0.1/relasi/list";
-        // $(document).ready(function() {
-        //     $.ajax({
-        //         type: 'GET',
-        //         url: "http://194.135.81.36:8080/lakon-0.1/relasi/list",
-        //         dataType: 'json',
-        //         success: function(data) {
-        //             for (var i = 0; i < data.length; i++) {
-        //                 console.log(data[i]);
-        //             }
-        //         }
-        //     });
-        //     return false;
-        // });
+        
     </script>
 
 
