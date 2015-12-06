@@ -136,7 +136,7 @@
 </body>
 
 <footer>
-    <p align="center" style="font-size: 10px;">Copyright 2015. Catalina.<br>Supported by:</p> 
+    <p align="center" style="font-size: 10px;">Hak Cipta 2015 oleh Catalina. <a href="about.php">Bantuan</a>.<br>Didukung oleh:</p> 
     <div class="row">
         <img src="assets/logos.png" class="img-responsive" id="logos">
     </div>

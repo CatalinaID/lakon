@@ -1,3 +1,18 @@
+#temp {
+  font-size: 8pt;
+  text-align: right;
+}
+
+.roboto {
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+#LakonIconAbout {
+  width: 10%;
+  height: 10%;
+  margin: 0 auto;
+}
+
 #logos {
   width: 30%;
   height: 30%;
