@@ -15,6 +15,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
@@ -67,7 +68,7 @@
                 <div class="c-tab__content">
                     <form class="search-form" id="formOne" onsubmit="return submit1();">
                         <div class="input-group input-group-lg">
-                            <input type="text" class="form-control" placeholder="Masukkan nama satu orang yang ingin dicari relasinya">
+                            <input type="text" class="form-control" placeholder="Masukkan nama satu orang yang ingin dicari relasinya" id="namaSatu">
                             <span class="input-group-btn">
                                 <button class="btn btn-danger" type="submit" id="buttonOne">
                                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -114,16 +115,6 @@
       myTabs.init();
     </script>
 
-    <script>
-        function submit1() {
-            location = 'result.php?nama1='+$("#namaSatu").val();
-            return false;
-        }
-        function submit2() {
-            location = 'result.php?nama1=' +$("#namaPertama").val()+'&nama2='+$("#namaKedua").val();
-            return false;
-        }
-    </script>
 </body>
 
 <footer>
