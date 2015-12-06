@@ -66,7 +66,7 @@
             </div>
             <div class="c-tab is-active">
                 <div class="c-tab__content">
-                    <form class="search-form" id="formOne" onsubmit="return submit1();">
+                    <form class="search-form" id="formOne">
                         <div class="input-group input-group-lg">
                             <input type="text" class="form-control" placeholder="Masukkan nama satu orang yang ingin dicari relasinya" id="namaSatu">
                             <span class="input-group-btn">
@@ -80,7 +80,7 @@
             </div>
             <div class="c-tab">
                 <div class="c-tab__content">
-                    <form class="search-form" id="formTwo" onsubmit="return submit2();">
+                    <form class="search-form" id="formTwo">
                         <div class="col-md-5 form-group">
                             <input type="text" class="form-control input-lg" placeholder="Masukkan nama orang pertama" id="namaPertama">
                         </div>
@@ -115,6 +115,24 @@
       myTabs.init();
     </script>
 
+    <script>
+        $("#formOne").submit(function(e) {
+            e.preventDefault();
+            if (id!=null && type!=null) {
+                location = "result.php?x=1&id="+id+"&type="+type;
+            } else {
+                alert("Harap pilih nama dari daftar yang ditampilkan");    
+            }
+        });
+        $("#formTwo").submit(function(e) {
+            e.preventDefault();
+            if (id1!=null && id2!=null) {
+                location = "result.php?x=2&id1="+id1+"&type1="+type1+"&id2="+id2+"&type2="+type2;
+            } else {
+                alert("Harap pilih dua nama dari daftar yang ditampilkan");
+            }
+        });
+    </script>
 </body>
 
 <footer>

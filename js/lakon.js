@@ -1,4 +1,3 @@
-
 //responsive tabs
 (function() {
 
@@ -51,71 +50,49 @@
 	window.tabs = tabs;
 })();
 
-//alchemy configuration
+//starting alchemy
 function startAlchemy() {
-	var some_data = {
-        "nodes" : [
-			{
-				"id" : 1,
-				"name" : "Susilo Bambang Yudhoyono",
-				root: true,
-				"type" : "main"
-			},
-			{
-				"id" : 2,
-				"name" : "Demokrat",
-				"type" : "organisasi"
-			}, 
-			{
-				"id" : 3,
-				"name" : "Khoirunisa Afifah",
-				"type" : "tokoh"
-			},
-			{
-				"id" : 4,
-				"name" : "Hatta Rajasa",
-				"type" : "tokoh"
-			}, 
-			{
-				"id" : 5,
-				"name" : "Edhie Baskoro",
-				"type" : "tokoh"
+	var params = window.location.search.substr(1);
+	var result = {};
+	params.split("&").forEach(function(part) {
+		var item = part.split("=");
+		result[item[0]] = decodeURIComponent(item[1]);
+	});
+	if (result.x == 1) {
+		var response = $.ajax({
+			type : 'GET',
+			url : "http://localhost:8080/lakon/RelasiEntitas/buildGraph",
+			data : ({id: result.id, type: result.type}),
+			dataType : "json",
+			success : function(data) {
+				return JSON.stringify(data);
 			}
-		],
-		"edges" : [
-			{
-				"source" : 1,
-				"target" : 3,
-				"keterangan" : "makan malam bersama",
-				"type" : "event"
-			},
-			{
-				"source" : 1,
-				"target" : 2,
-				"keterangan" : "ketua dewan pembina partai",
-				"type" : "jabatan"
-			},
-			{
-				"source" : 1,
-				"target" : 4,
-				"keterangan" : "besan",
-				"type" : "hubungan"
-			}, 
-			{
-				"source" : 1,
-				"target" : 5,
-				"keterangan" : "anak",
-				"type" : "hubungan"
-			},
-			{
-				"source" : 2,
-				"target" : 5,
-				"keterangan" : "anggota",
-				"type" : "jabatan"
+		});
+		response.done(function(result) {
+			var some_data = result;
+			var config = getConfig(some_data);
+			alchemy = new Alchemy(config);
+		});
+	} else if (result.x == 2) {
+		var response = $.ajax({
+			type : 'GET',
+			url : "http://localhost:8080/lakon/RelasiEntitas/buildGraph2Ent",
+			data : ({id1: result.id1, type1: result.type1, id2 : result.id2, type2 : result.type2}),
+			dataType : "json",
+			success : function(data) {
+				return JSON.stringify(data);
 			}
-		]
-    };
-    var config = {
+		});
+		response.done(function(result) {
+			var some_data = result;
+			var config = getConfig(some_data);
+			alchemy = new Alchemy(config);
+		});
+	}
+}
+
+function getConfig(some_data) {
+	var config = {
     	dataSource : some_data,
         fixRootNodes : true,
         nodeTypes : {
@@ -161,31 +138,17 @@ function startAlchemy() {
         },
         captionsToogle : true
     };
-    alchemy = new Alchemy(config);
+    return config;
 }
-
-// function getData(query) {
-// 	var url = "http://194.135.81.36:8080/lakon-0.1/relasi/list";
-//     $.ajax({
-//         type: 'GET',
-//         url: "http://194.135.81.36:8080/lakon-0.1/relasi/list",
-//         dataType: 'json',
-//         success: function(data) {
-//             for (var i = 0; i < data.length; i++) {
-//                 console.log(data[i]);
-//             }
-//             return data;
-//         }
-//     });
-// }
-
 //autocomplete
+var id, id1, id2, type, type1, type2;
 $('.form-control').click(function() {
 	if (this.id == "namaSatu") {
        $("#namaSatu").autocomplete({
         	source: function(request, response) {
         		$.ajax({
-                    url : "http://localhost:8080/lakon/Alias/searchByAlias?alias=" + request.term,
+                    url : "http://localhost:8080/lakon/Alias/searchByAlias",
+                    data : ({alias : request.term}),
         			dataType: "json",
         			jsonp : false,
                     success: function(data) {
@@ -204,6 +167,9 @@ $('.form-control').click(function() {
             },
             minLength : 1,
             select : function (event, ui) {
+            	id = ui.item.id;
+            	type = ui.item.type;
+            	$("namaSatu").val(ui.item.label);
                 console.log("selected : " + ui.item.label + " " + ui.item.id);
             }
         });
@@ -212,7 +178,8 @@ $('.form-control').click(function() {
         $("#namaPertama").autocomplete({
             source: function(request, response) {
         		$.ajax({
-                    url : "http://localhost:8080/lakon/Alias/searchByAlias?alias=" + request.term,
+                    url : "http://localhost:8080/lakon/Alias/searchByAlias",
+                    data : ({alias : request.term}),
         			dataType: "json",
         			jsonp : false,
                     success: function(data) {
@@ -231,6 +198,9 @@ $('.form-control').click(function() {
             },
             minLength : 1,
             select : function (event, ui) {
+            	id1 = ui.item.id;
+            	type1 = ui.item.type;
+            	$("namaPertama").val(ui.item.label);
                 console.log("selected : " + ui.item.label + " " + ui.item.id);
             }
         });
@@ -239,7 +209,8 @@ $('.form-control').click(function() {
         $("#namaKedua").autocomplete({
             source: function(request, response) {
         		$.ajax({
-                    url : "http://localhost:8080/lakon/Alias/searchByAlias?alias=" + request.term,
+                    url : "http://localhost:8080/lakon/Alias/searchByAlias",
+                    data : ({alias : request.term}),
         			dataType: "json",
         			jsonp : false,
                     success: function(data) {
@@ -258,6 +229,9 @@ $('.form-control').click(function() {
             },
             minLength : 1,
             select : function (event, ui) {
+            	id2 = ui.item.id;
+            	type2 = ui.item.type;
+            	$("namaSatu").val(ui.item.label);
                 console.log("selected : " + ui.item.label + " " + ui.item.id);
             }
         });
