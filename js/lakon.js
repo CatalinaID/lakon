@@ -50,6 +50,9 @@
 	window.tabs = tabs;
 })();
 
+var rootUrl = "http://localhost:8080/lakon/";
+// var rootUrl = "http://194.135.81.36:8080/lakon-0.1/";
+
 //starting alchemy
 function startAlchemy() {
 	var params = window.location.search.substr(1);
@@ -59,9 +62,10 @@ function startAlchemy() {
 		result[item[0]] = decodeURIComponent(item[1]);
 	});
 	if (result.x == 1) {
+		$("#hasil").text("Hasil pencarian untuk " + result.nama);
 		var response = $.ajax({
 			type : 'GET',
-			url : "http://localhost:8080/lakon/RelasiEntitas/buildGraph",
+			url : rootUrl + "RelasiEntitas/buildGraph",
 			data : ({id: result.id, type: result.type}),
 			dataType : "json",
 			success : function(data) {
@@ -72,11 +76,40 @@ function startAlchemy() {
 			var some_data = result;
 			var config = getConfig(some_data);
 			alchemy = new Alchemy(config);
+
+			for (var i = 0; i< result.edges.length; i++) {
+				var keterangan = result.edges[i].keterangan;
+				var sourceId = result.edges[i].source;
+				var targetId = result.edges[i].target;
+
+				var source, target;
+
+				console.log(keterangan);
+
+				for(var j=0; j<result.nodes.length; j++) {
+					if (sourceId == result.nodes[j].id) {
+						source = result.nodes[j].name;
+						console.log(source);
+					} 
+					if (targetId == result.nodes[j].id) {
+						target = result.nodes[j].name;
+						console.log(target);
+					}
+				}
+
+				if(source!=null && target!=null && keterangan!=null) {
+					var num = i+1;
+					$("#listresult").append(
+						'<li class="list-group-item"><b>Relasi '+num+"</b> "+source+" "+keterangan+" "+target+" </li>"
+					);
+				}
+			}
 		});
 	} else if (result.x == 2) {
+		$("#hasil").text("Hasil pencarian untuk " + result.nama1 + " dan " + result.nama2);
 		var response = $.ajax({
 			type : 'GET',
-			url : "http://localhost:8080/lakon/RelasiEntitas/buildGraph2Ent",
+			url : rootUrl+ "RelasiEntitas/buildGraph2Ent",
 			data : ({id1: result.id1, type1: result.type1, id2 : result.id2, type2 : result.type2}),
 			dataType : "json",
 			success : function(data) {
@@ -141,13 +174,13 @@ function getConfig(some_data) {
     return config;
 }
 //autocomplete
-var id, id1, id2, type, type1, type2;
+var id, id1, id2, type, type1, type2, nama, nama1, nama2;
 $('.form-control').click(function() {
 	if (this.id == "namaSatu") {
        $("#namaSatu").autocomplete({
         	source: function(request, response) {
         		$.ajax({
-                    url : "http://localhost:8080/lakon/Alias/searchByAlias",
+                    url : rootUrl+"Alias/searchByAlias",
                     data : ({alias : request.term}),
         			dataType: "json",
         			jsonp : false,
@@ -169,6 +202,7 @@ $('.form-control').click(function() {
             select : function (event, ui) {
             	id = ui.item.id;
             	type = ui.item.type;
+            	nama = ui.item.label;
             	$("namaSatu").val(ui.item.label);
                 console.log("selected : " + ui.item.label + " " + ui.item.id);
             }
@@ -178,7 +212,7 @@ $('.form-control').click(function() {
         $("#namaPertama").autocomplete({
             source: function(request, response) {
         		$.ajax({
-                    url : "http://localhost:8080/lakon/Alias/searchByAlias",
+                    url : rootUrl+"Alias/searchByAlias",
                     data : ({alias : request.term}),
         			dataType: "json",
         			jsonp : false,
@@ -200,6 +234,7 @@ $('.form-control').click(function() {
             select : function (event, ui) {
             	id1 = ui.item.id;
             	type1 = ui.item.type;
+            	nama1 = ui.item.label;
             	$("namaPertama").val(ui.item.label);
                 console.log("selected : " + ui.item.label + " " + ui.item.id);
             }
@@ -209,7 +244,7 @@ $('.form-control').click(function() {
         $("#namaKedua").autocomplete({
             source: function(request, response) {
         		$.ajax({
-                    url : "http://localhost:8080/lakon/Alias/searchByAlias",
+                    url : rootUrl+"Alias/searchByAlias",
                     data : ({alias : request.term}),
         			dataType: "json",
         			jsonp : false,
@@ -231,6 +266,7 @@ $('.form-control').click(function() {
             select : function (event, ui) {
             	id2 = ui.item.id;
             	type2 = ui.item.type;
+            	nama2 = ui.item.label
             	$("namaSatu").val(ui.item.label);
                 console.log("selected : " + ui.item.label + " " + ui.item.id);
             }

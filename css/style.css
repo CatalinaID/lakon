@@ -76,25 +76,25 @@ body {
 }
 
 .judul {
-	margin-top: 5%;
-	margin-bottom: 20px;
+  margin-top: 5%;
+  margin-bottom: 20px;
   font-family: 'Lobster', cursive;
 }
 
 .search-form {
-	height: auto;
-	margin-top: 5%;
+  height: auto;
+  margin-top: 5%;
 }
 .input-group {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 /** TABS **/
 .c-tabs-nav {
-	display:flex;
-	list-style:none;
-	margin:0;
-	padding:0;
+  display:flex;
+  list-style:none;
+  margin:0;
+  padding:0;
 }
 .c-tabs-nav__link {
   flex: 1;
@@ -160,14 +160,14 @@ body {
 
 /** RESULT PAGE **/
 .keterangan {
-	padding-left: 10px;
+  padding-left: 10px;
   font-family: 'Lobster', cursive;
 }
 .content-graf {
-	height: 400px;
-	width: auto;
+  height: 400px;
+  width: auto;
 }
 .content {
-	padding-right: 20%;
-	padding-left: 20%;
+  padding-right: 20%;
+  padding-left: 20%;
 }

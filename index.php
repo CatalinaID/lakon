@@ -119,7 +119,7 @@
         $("#formOne").submit(function(e) {
             e.preventDefault();
             if (id!=null && type!=null) {
-                location = "result.php?x=1&id="+id+"&type="+type;
+                location = "result.php?x=1&id="+id+"&type="+type+"&nama="+nama;
             } else {
                 alert("Harap pilih nama dari daftar yang ditampilkan");    
             }
@@ -127,7 +127,7 @@
         $("#formTwo").submit(function(e) {
             e.preventDefault();
             if (id1!=null && id2!=null) {
-                location = "result.php?x=2&id1="+id1+"&type1="+type1+"&id2="+id2+"&type2="+type2;
+                location = "result.php?x=2&id1="+id1+"&type1="+type1+"&id2="+id2+"&type2="+type2+"&nama1="+nam1+"&nama2="+nama2;
             } else {
                 alert("Harap pilih dua nama dari daftar yang ditampilkan");
             }

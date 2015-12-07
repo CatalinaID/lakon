@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>LAKON</title>
+    <title>Lakon</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -21,8 +21,6 @@
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,300italic,300,700,700italic' rel='stylesheet' type='text/css'>
-
-    <link rel="icon" type="image/png" href="assets/mask.png">
 
     <!-- Custom CSS -->
     <style>
@@ -49,12 +47,12 @@
     <!-- Page Content -->
     <div class="content">
         <div class="row">
-            <a href ="index.php" title="Kembali ke beranda"><img src="assets/mask.png" class="img-responsive" id="LakonIconSmall"/></a>                        
+            <a href="index.php"><img src="assets/mask.png" class="img-responsive" id="LakonIconSmall"></a>                        
         </div>
         <hr>
         <div class="row">
-            <div class="col-md-12 judul" id="JudulResult">
-                <h2 class="lobster" id="hasil"></h2>
+            <div class="col-md-6 judul" id="JudulResult">
+                <h2 class="lobster">Hasil pencarian lilili</h2>
             </div>
         </div>
 
@@ -62,12 +60,16 @@
             <div class="content-graf">
                 <div class="alchemy" id="alchemy">
                 </div>
-                <p id="temp">Hover pada graf untuk melihat label.</p>
+                <p id="temp"> </p>
             </div> <!--graf nya disini -->
             <h2 class="keterangan"> Keterangan </h2>
             <div id="temp"></div>
-            <ul class="list-group" id="listresult">
-                
+            <ul class="list-group">
+                <li class="list-group-item"><b>Relasi 3</b> Setya Novanto penyelidikan Kejaksaan Agung </li>
+                <li class="list-group-item"><b>Relasi 4</b> Setya Novanto Ketua DPR Dewan Perwakilan Rakyat </li>
+                <li class="list-group-item"><b>Relasi 5</b> Setya Novanto saksi kasus Setya Novanto Sudirman Said </li>
+                <li class="list-group-item"><b>Relasi 6</b> Kejaksaan Agung Jaksa Agung HM Prasetyo </li>
+                <li class="list-group-item"><b>Relasi 7</b> Kejaksaan Agung pemanggilan dini hari Maroef Sjamsoeddin </li>
             </ul>
 
         </div>
@@ -90,14 +92,27 @@
     </script>
 
     <script type="text/javascript">
-
+        // var url = "http://194.135.81.36:8080/lakon-0.1/relasi/list";
+        // $(document).ready(function() {
+        //     $.ajax({
+        //         type: 'GET',
+        //         url: "http://194.135.81.36:8080/lakon-0.1/relasi/list",
+        //         dataType: 'json',
+        //         success: function(data) {
+        //             for (var i = 0; i < data.length; i++) {
+        //                 console.log(data[i]);
+        //             }
+        //         }
+        //     });
+        //     return false;
+        // });
     </script>
 
 
 </body>
 
 <footer>
-    <p align="center" style="font-size: 10px;">Hak Cipta 2015 oleh Catalina. <a href="about.php">Bantuan</a>.<br>Didukung oleh:</p> 
+    <p align="center" style="font-size: 10px;">Copyright 2015. Catalina.<br>Supported by:</p> 
     <div class="row">
         <img src="assets/logos.png" class="img-responsive" id="logos">
     </div>
